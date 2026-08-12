@@ -1,0 +1,46 @@
+COMO USAR A LOJA DE PAPELARIA
+==============================
+
+1. Como abrir o site
+---------------------
+Basta abrir o arquivo "index.html" com dois cliques (ele abre no navegador).
+Não precisa de internet nem de instalar nada.
+
+2. Como adicionar/editar produtos
+-----------------------------------
+Abra o arquivo "script.js" em um editor de texto (Bloco de Notas, VS Code etc).
+No topo do arquivo tem a lista "produtos". Cada produto é um bloco assim:
+
+  {
+    id: 7,
+    nome: "Nome do produto",
+    descricao: "Uma frase curta sobre o produto.",
+    preco: 19.90,
+    imagem: "images/nome-da-foto.jpg"
+  },
+
+- "id" precisa ser um número que não se repita.
+- "preco" usa ponto (.) para casas decimais, não vírgula.
+- "imagem" é o caminho da foto dentro da pasta "images".
+
+3. Como adicionar as fotos
+-----------------------------
+Coloque os arquivos de imagem (.jpg, .png etc) dentro da pasta "images".
+Depois, escreva o nome exato do arquivo no campo "imagem" do produto
+(exemplo: "images/caderno.jpg").
+
+4. Como funciona a compra
+-----------------------------
+- Na página inicial, ao clicar em "Comprar" em um produto, ele é
+  adicionado ao carrinho e você é levado para a página do carrinho.
+- Na página do carrinho, dá para aumentar/diminuir a quantidade ou remover itens.
+- Ao clicar em "Comprar" no carrinho, aparece uma janela escrito
+  "VOCÊ COMPROU!!!". Ao fechar essa janela, o carrinho é esvaziado
+  e você volta para a loja.
+
+Estrutura de arquivos:
+- index.html      -> página inicial com os produtos
+- carrinho.html    -> página do carrinho de compras
+- style.css        -> estilo visual do site
+- script.js        -> lista de produtos e toda a lógica do carrinho
+- images/          -> pasta onde ficam as fotos dos produtos

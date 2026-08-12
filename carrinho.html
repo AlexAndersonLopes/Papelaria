@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Carrinho - Papelaria Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <h1>📚 Papelaria Online</h1>
+    <a href="index.html" class="btn-carrinho">⬅ Voltar à loja</a>
+  </header>
+
+  <main>
+    <h2 class="titulo-secao">Meu Carrinho</h2>
+
+    <div id="lista-carrinho" class="lista-carrinho">
+      <!-- Os itens do carrinho são inseridos aqui automaticamente -->
+    </div>
+
+    <div class="resumo-carrinho">
+      <p class="total">Total: <span id="total-carrinho">R$ 0,00</span></p>
+      <button id="btn-comprar" class="btn-comprar">Comprar</button>
+    </div>
+  </main>
+
+  <!-- Janela sobreposta (modal) de confirmação da compra -->
+  <div id="modal-compra" class="modal-overlay escondido">
+    <div class="modal-caixa">
+      <h2>VOCÊ COMPROU!!!</h2>
+      <button id="btn-fechar-modal" class="btn-comprar">OK</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>Trabalho escolar - Loja de Papelaria &copy; 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    renderizarCarrinho();
+    atualizarContadorCarrinho();
+
+    document.getElementById('btn-comprar').addEventListener('click', function () {
+      const carrinho = obterCarrinho();
+      if (carrinho.length === 0) {
+        alert('Seu carrinho está vazio!');
+        return;
+      }
+      document.getElementById('modal-compra').classList.remove('escondido');
+    });
+
+    document.getElementById('btn-fechar-modal').addEventListener('click', function () {
+      localStorage.removeItem('carrinho');
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

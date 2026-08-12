@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- Ícones e Favicon -->
+ <link rel="icon" type="image/x-icon" href="images/logotiposss (1).png">
+ <link rel="apple-touch-icon" sizes="180x180" href="images/logotiposss (1).png">
+ <link rel="apple-touch-startup-image" href="images/logotiposss (1).png">
+ <link rel="icon" type="image/png" sizes="32x32" href="images/logotiposss (1).png">
+ <link rel="icon" type="image/png" sizes="16x16" href="images/logotiposss (1).png">
+
+ <!-- Manifest (PWA) -->
+ <link rel="manifest" href="manifest.json">
+
+  <title>Cat School</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <h1>📚 Papelaria Cat_School</h1>
+    <a href="carrinho.html" class="btn-carrinho">
+      🛒 Carrinho <span id="contador-carrinho">0</span>
+    </a>
+  </header>
+
+  <main>
+    <h2 class="titulo-secao">Nossos Produtos</h2>
+    <div id="lista-produtos" class="grid-produtos">
+      <!-- Os produtos são inseridos aqui automaticamente pelo script.js -->
+    </div>
+  </main>
+
+  <footer>
+    <p>Trabalho escolar - Lorena - Larissa - Livia - Richard &copy; 2026</p>
+  </footer>
+
+  <img src="images/logotiposss (1).png" alt="Logo Cat School" class="logo-fixo">
+
+  <script src="script.js"></script>
+  <script>
+    // Renderiza os produtos da lista na página inicial
+    renderizarProdutos();
+    atualizarContadorCarrinho();
+  </script>
+</body>
+</html>
